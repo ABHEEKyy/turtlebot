@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>turtlebot_pursuit_simulation</name>
+  <version>0.1.0</version>
+  <description>Gazebo arena and launch files for the TurtleBot Pursuit and Evasion Challenge.</description>
+  <maintainer email="challenge@example.com">Challenge Team</maintainer>
+  <license>Apache-2.0</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>ros2launch</exec_depend>
+  <exec_depend>turtlebot_catcher</exec_depend>
+  <exec_depend>turtlebot_runner</exec_depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#071014" />
+    <title>Pursuit / Evasion Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="viewport-panel" aria-label="3D pursuit simulation">
+        <div id="scene" class="scene"></div>
+        <div class="scanline"></div>
+        <header class="topbar">
+          <div class="brand-lockup">
+            <span class="brand-mark">⊙</span>
+            <div>
+              <p class="eyebrow">TB4 / SIMULATION 01</p>
+              <h1>Pursuit <span>/</span> Evasion</h1>
+            </div>
+          </div>
+          <div class="topbar-actions">
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode"><span id="theme-icon">☼</span><span id="theme-label">LIGHT</span></button>
+            <div class="session-state"><i id="status-dot"></i><span id="session-status">READY TO RUN</span></div>
+          </div>
+        </header>
+        <div class="viewport-caption">
+          <span>ARENA 40 × 40 M</span>
+          <span class="caption-divider"></span>
+          <span>TOP-DOWN TRACKING</span>
+        </div>
+        <div class="orbit-hint">DRAG TO ORBIT&nbsp;&nbsp; · &nbsp;&nbsp;SCROLL TO ZOOM</div>
+      </section>
+
+      <aside class="control-panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">MATCH CONTROL</p>
+            <h2>Live arena</h2>
+          </div>
+          <span class="round-tag">ROUND 01</span>
+        </div>
+
+        <div class="scoreboard">
+          <div class="score-card catcher-card">
+            <div class="score-label"><span class="signal orange"></span>CATCHER</div>
+            <strong id="catcher-score">00.0</strong><span class="unit">M/S</span>
+            <div class="meter"><span id="catcher-meter"></span></div>
+            <small>TRACKING TARGET</small>
+          </div>
+          <div class="score-card runner-card">
+            <div class="score-label"><span class="signal cyan"></span>RUNNER</div>
+            <strong id="runner-score">00.0</strong><span class="unit">M/S</span>
+            <div class="meter"><span id="runner-meter"></span></div>
+            <small>EVASION ACTIVE</small>
+          </div>
+        </div>
+
+        <div class="timer-block">
+          <div class="section-label"><span>MATCH CLOCK</span><span id="match-round">LIVE / 01</span></div>
+          <div class="timer"><span id="timer">05:00</span><span class="timer-state">SURVIVAL WINDOW</span></div>
+          <div class="progress-track"><span id="time-progress"></span></div>
+        </div>
+
+        <div class="telemetry">
+          <div class="section-label"><span>TELEMETRY</span><span class="live-label"><i></i>LIVE</span></div>
+          <div class="telemetry-row"><span>Separation</span><strong id="separation">—</strong><span>m</span></div>
+          <div class="telemetry-row"><span>Catcher vision</span><strong id="vision-state">—</strong><span></span></div>
+          <div class="telemetry-row"><span>Catcher heading</span><strong id="catcher-heading">—</strong><span>°</span></div>
+          <div class="telemetry-row"><span>Runner heading</span><strong id="runner-heading">—</strong><span>°</span></div>
+          <div class="telemetry-row"><span>Capture radius</span><strong>0.55</strong><span>m</span></div>
+        </div>
+
+        <div class="strategy-block">
+          <div class="section-label"><span>ACTIVE STRATEGIES</span><span>BASELINE</span></div>
+          <div class="strategy-row"><span class="strategy-dot orange"></span><span>Vector pursuit</span><kbd>P-01</kbd></div>
+          <div class="strategy-row"><span class="strategy-dot cyan"></span><span>Threat escape + boundary bias</span><kbd>E-01</kbd></div>
+        </div>
+
+        <div class="spectate-block">
+          <div class="section-label"><span>SPECTATE</span><span id="spectate-label">FULL ARENA</span></div>
+          <div class="spectate-controls" role="group" aria-label="Choose spectator focus">
+            <button class="spectate-button active" data-spectate="arena" type="button">ARENA</button>
+            <button class="spectate-button" data-spectate="catcher" type="button">CATCHER</button>
+            <button class="spectate-button" data-spectate="runner" type="button">RUNNER</button>
+          </div>
+        </div>
+
+        <div class="action-bar">
+          <button id="run-button" class="primary-button"><span>▶</span> START MATCH</button>
+          <button id="reset-button" class="icon-button" aria-label="Reset match" title="Reset match">↻</button>
+        </div>
+        <p class="footer-note"><span>●</span> SIMULATION CONNECTED <b>v0.1.0</b></p>
+      </aside>
+    </main>
+    <script type="importmap">
+      {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"}}
+    </script>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

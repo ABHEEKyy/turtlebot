@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.venv/
+install/
+build/
+log/
+.vscode/.ropeproject/

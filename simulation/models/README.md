@@ -1,0 +1,1 @@
+Place the TurtleBot 4 Lite Gazebo model or simulator-specific robot descriptions here when the platform package is selected. The arena world is intentionally robot-agnostic; robot spawn and pose-topic bridges belong in the launch file for the chosen Gazebo/TurtleBot 4 distribution.

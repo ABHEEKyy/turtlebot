@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="pursuit_arena">
+    <include><uri>model://ground_plane</uri></include>
+    <include><uri>model://sun</uri></include>
+    <physics type="ode"><max_step_size>0.001</max_step_size><real_time_update_rate>1000</real_time_update_rate></physics>
+    <gui><camera name="user_camera"><pose>0 -9 12 0.9 0 0</pose></camera></gui>
+    <model name="north_wall"><static>true</static><link name="link"><collision name="collision"><geometry><box><size>10.4 0.2 0.4</size></box></geometry><pose>0 5.1 0.2 0 0 0</pose></collision><visual name="visual"><geometry><box><size>10.4 0.2 0.4</size></box></geometry><pose>0 5.1 0.2 0 0 0</pose></visual></link></model>
+    <model name="south_wall"><static>true</static><link name="link"><collision name="collision"><geometry><box><size>10.4 0.2 0.4</size></box></geometry><pose>0 -5.1 0.2 0 0 0</pose></collision><visual name="visual"><geometry><box><size>10.4 0.2 0.4</size></box></geometry><pose>0 -5.1 0.2 0 0 0</pose></visual></link></model>
+    <model name="east_wall"><static>true</static><link name="link"><collision name="collision"><geometry><box><size>0.2 10.4 0.4</size></box></geometry><pose>5.1 0 0.2 0 0 0</pose></collision><visual name="visual"><geometry><box><size>0.2 10.4 0.4</size></box></geometry><pose>5.1 0 0.2 0 0 0</pose></visual></link></model>
+    <model name="west_wall"><static>true</static><link name="link"><collision name="collision"><geometry><box><size>0.2 10.4 0.4</size></box></geometry><pose>-5.1 0 0.2 0 0 0</pose></collision><visual name="visual"><geometry><box><size>0.2 10.4 0.4</size></box></geometry><pose>-5.1 0 0.2 0 0 0</pose></visual></link></model>
+  </world>
+</sdf>

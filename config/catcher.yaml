@@ -1,0 +1,5 @@
+catcher_node:
+  ros__parameters:
+    linear_speed: 0.45
+    angular_gain: 2.2
+    max_angular_speed: 2.5

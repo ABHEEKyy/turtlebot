@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "cesium.gltf-vscode",
+    "slevesque.shader"
+  ],
+  "unwantedRecommendations": []
+}

@@ -1,0 +1,6 @@
+runner_node:
+  ros__parameters:
+    linear_speed: 0.38
+    angular_gain: 2.8
+    threat_distance: 2.8
+    boundary_margin: 1.0
