@@ -42,3 +42,11 @@ py -3 -m http.server 5000
 ```
 
 For authored assets, create and optimize models in Blender, export them as `.glb`, and place them in `web/assets/`. Substance 3D Painter can author the PBR texture maps that glTF stores in its material channels. The workspace recommends Cesium glTF Tools and shader language support through `.vscode/extensions.json`; those extensions inspect assets and shaders but are not runtime dependencies of the web app.
+
+## Public web deployment
+
+The browser app deploys automatically to GitHub Pages whenever `main` changes. After the first workflow run completes, it will be available at:
+
+`https://abheekyy.github.io/turtlebot/`
+
+In the GitHub repository, open **Settings > Pages** and set **Source** to **GitHub Actions** if Pages has not been enabled yet. The workflow is defined in `.github/workflows/deploy-pages.yml` and publishes only the `web/` folder.
