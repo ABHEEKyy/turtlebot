@@ -50,3 +50,5 @@ The browser app deploys automatically to GitHub Pages whenever `main` changes. A
 `https://abheekyy.github.io/turtlebot/`
 
 In the GitHub repository, open **Settings > Pages** and set **Source** to **GitHub Actions** if Pages has not been enabled yet. The workflow is defined in `.github/workflows/deploy-pages.yml` and publishes only the `web/` folder.
+ 
+The deployed page includes search metadata, structured data, `robots.txt`, and `sitemap.xml` under the project name **TurtleBot Pursuit & Evasion Challenge**. Search engines control indexing time; submitting `https://abheekyy.github.io/turtlebot/` in Google Search Console or Bing Webmaster Tools can request faster discovery.
