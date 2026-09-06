@@ -1,4 +1,6 @@
-# TurtleBot Pursuit & Evasion Challenge
+# RunCatch | TurtleBot Pursuit & Evasion Challenge
+
+**RunCatch** is the public name of this browser-based 3D pursuit and evasion experience.
 
 A ROS 2 and Gazebo starter workspace for a two-robot autonomous competition. The Catcher must locate and capture the Runner; the Runner must remain uncaptured for the match duration. TurtleBot 4 Lite is the tentative platform.
 
@@ -51,4 +53,4 @@ The browser app deploys automatically to GitHub Pages whenever `main` changes. A
 
 In the GitHub repository, open **Settings > Pages** and set **Source** to **GitHub Actions** if Pages has not been enabled yet. The workflow is defined in `.github/workflows/deploy-pages.yml` and publishes only the `web/` folder.
  
-The deployed page includes search metadata, structured data, `robots.txt`, and `sitemap.xml` under the project name **TurtleBot Pursuit & Evasion Challenge**. Search engines control indexing time; submitting `https://abheekyy.github.io/turtlebot/` in Google Search Console or Bing Webmaster Tools can request faster discovery.
+The deployed page includes search metadata, structured data, `robots.txt`, and `sitemap.xml` under the public name **RunCatch**. Search engines control indexing time; submitting `https://abheekyy.github.io/turtlebot/` in Google Search Console or Bing Webmaster Tools can request faster discovery.
